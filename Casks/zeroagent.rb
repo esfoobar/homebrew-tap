@@ -10,22 +10,23 @@ cask "zeroagent" do
   desc "Desktop workspace where a lead agent dispatches work to worker agents"
   homepage "https://mvplean.com/zeroagent/"
 
-  # The app checks the same release feed on its own and updates itself
-  # (ZA-148), so brew should never try to manage that part.
-  auto_updates true
-
   livecheck do
     url "https://releases.zeroagent.mvplean.com/latest-mac.yml"
     regex(/^version:\s*([\d.]+)/i)
   end
+
+  # The app checks the same release feed on its own and updates itself
+  # (ZA-148), so brew should never try to manage that part.
+  auto_updates true
+  depends_on :macos
 
   app "ZeroAgent.app"
 
   zap trash: [
     "~/Library/Application Support/ZeroAgent",
     "~/Library/Caches/com.mvplean.zeroagent",
-    "~/Library/Preferences/com.mvplean.zeroagent.plist",
     "~/Library/Logs/ZeroAgent",
+    "~/Library/Preferences/com.mvplean.zeroagent.plist",
     "~/Library/Saved Application State/com.mvplean.zeroagent.savedState",
   ]
 end
