@@ -18,7 +18,7 @@ cask "zeroagent" do
   # The app checks the same release feed on its own and updates itself
   # (ZA-148), so brew should never try to manage that part.
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "ZeroAgent.app"
 
