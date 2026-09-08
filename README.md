@@ -5,7 +5,7 @@ A Homebrew tap for MVPLean apps. Currently one cask: ZeroAgent.
 ## Install
 
 ```
-brew install --cask esfoobar/tap/zeroagent
+brew install --cask zeroagentdev/tap/zeroagent
 ```
 
 `brew upgrade` picks up new releases on its own; ZeroAgent also updates

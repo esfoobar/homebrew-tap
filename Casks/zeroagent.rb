@@ -8,7 +8,7 @@ cask "zeroagent" do
   url "https://releases.zeroagent.mvplean.com/ZeroAgent-#{version}-#{arch}.dmg"
   name "ZeroAgent"
   desc "Desktop workspace where a lead agent dispatches work to worker agents"
-  homepage "https://mvplean.com/zeroagent/"
+  homepage "https://mvplean.com/zeroagent"
 
   livecheck do
     url "https://releases.zeroagent.mvplean.com/latest-mac.yml"
