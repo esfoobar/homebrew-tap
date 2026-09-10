@@ -5,13 +5,13 @@ cask "zeroagent" do
   sha256 arm:   "73f470fac2521d8dc2c572e35e20dab08a84df43ccd3854848ff503c47840076",
          intel: "5448cdb872f046b7e9a129bde7f228d5dac64df90836ef92846394e2e9a44c08"
 
-  url "https://releases.zeroagent.mvplean.com/ZeroAgent-#{version}-#{arch}.dmg"
+  url "https://releases.zeroagenthq.com/ZeroAgent-#{version}-#{arch}.dmg"
   name "ZeroAgent"
   desc "Desktop workspace where a lead agent dispatches work to worker agents"
-  homepage "https://mvplean.com/zeroagent"
+  homepage "https://zeroagenthq.com"
 
   livecheck do
-    url "https://releases.zeroagent.mvplean.com/latest-mac.yml"
+    url "https://releases.zeroagenthq.com/latest-mac.yml"
     regex(/^version:\s*([\d.]+)/i)
   end
 
